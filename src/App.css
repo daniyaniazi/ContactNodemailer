@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+.form__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form__container > form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 40px;
+  background-color: crimson;
+  color: beige;
+  border-radius: 5px;
+  max-width: 70%;
+  min-width: 50%;
+}
+.form__container > form > .form-item {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+}
+label {
+  font-size: 20px;
+  font-weight: lighter;
+  width: 100px;
+}
+input,
+textarea {
+  width: 300px;
+  padding: 13px;
+  border-radius: 20px;
+  border: none;
+}
+input:focus,
+textarea:focus {
+  border: none;
+  outline: none;
+  background-color: rgb(255, 224, 224);
+  border: 2px solid rgba(110, 110, 110, 0.568);
+}
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #ffa5a5;
+  color: crimson;
+  font-size: 20px;
+  font-weight: lighter;
+  margin-top: 5px;
+}
+button:hover {
+  background-color: rgba(201, 5, 44, 0.89);
   color: white;
+  border: 1px solid white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.success-msg {
+  background-color: rgba(143, 250, 152, 0.815);
+  color: green;
+  padding: 8px;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
 }
